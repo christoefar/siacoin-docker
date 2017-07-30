@@ -1,6 +1,6 @@
 FROM debian
 
-ARG SIA_VERSION=1.2.2
+ARG SIA_VERSION=1.3.0
 
 RUN apt-get update && \
     apt-get install -y wget unzip && \
@@ -12,6 +12,6 @@ RUN apt-get update && \
     rm -rf /tmp/sia/ /tmp/sia.zip /var/lib/apt/lists
 
 WORKDIR /sia
-EXPOSE 9981 9982
+EXPOSE 9980 9981 9982 
 
 CMD ["/usr/local/bin/siad"]
